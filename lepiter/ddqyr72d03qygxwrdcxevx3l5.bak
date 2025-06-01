@@ -134,7 +134,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T20:54:06.608918+02:00"
+						"dateAndTimeString" : "2025-06-01T22:45:50.213345+02:00"
 					}
 				},
 				"uid" : {
@@ -142,6 +142,40 @@
 					"uidString" : "E7hC6OjyDQCA3l9gC5boQQ=="
 				},
 				"code" : "myK8s reload"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T22:45:53.174234+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T22:45:54.15217+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oKhheOryDQCLnB4IC5boQQ=="
+				},
+				"code" : "PBApplication stop\t"
 			},
 			{
 				"__type" : "textSnippet",
@@ -179,43 +213,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "## Examples"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T22:19:19.842502+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T22:19:19.842502+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "31dpGeryDQCJJKKdC5boQQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			},
 			{
 				"__type" : "exampleSnippet",

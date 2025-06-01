@@ -20,6 +20,10 @@ class ListView(ABC):
 		if self._items == None:
 			self._items = self.list().items
 		return self._items
+		
+	@property
+	def accessor(self):
+		return False
 
 	@gtView
 	def gtViewList(self, aBuilder):
@@ -30,13 +34,9 @@ class ListView(ABC):
 		table.column("Name", lambda item: str(item.metadata.name))
 		table.column("Status", lambda item: str(item.status.phase))
 #		table.column("Age", lambda index: str(self.namespaces[index].metadata.age))
-		table.set_accessor(lambda item: Namespace(self.items[item].metadata.name))
+		if self.accessor:
+			table.set_accessor(self.accessor)
 		return table
-
-class NamespacedListView(ListView):
-	def __init__(self, namespace):
-		super().__init__()
-		self._namespace = namespace
 		
 class Namespaces(ListView):
 	title = "Namespaces"
@@ -45,22 +45,10 @@ class Namespaces(ListView):
 	def list(self):
 		v1 = client.CoreV1Api()
 		return v1.list_namespace
-
-class PodList(NamespacedListView):
-	title = "Pods"
-
-	@property
-	def list(self):
-		v1 = client.CoreV1Api()
-		return lambda: v1.list_namespaced_pod(self._namespace)
 		
-class DeploymentList(NamespacedListView):
-	title = "Deployments"
-	
 	@property
-	def list(self):
-		v1 = client.AppsV1Api()
-		return lambda: v1.list_namespaced_deployment(self._namespace)
+	def accessor(self):
+		return lambda item: Namespace(self.items[item].metadata.name)
 		
 class Namespace:
 	
