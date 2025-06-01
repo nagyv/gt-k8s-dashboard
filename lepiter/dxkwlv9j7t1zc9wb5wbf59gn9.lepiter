@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T16:47:00.308157+02:00"
+						"dateAndTimeString" : "2025-06-01T19:35:12.058274+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "The following is needed for 1password to work with GT"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -96,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-01T16:46:55.653475+02:00"
+			"dateAndTimeString" : "2025-06-01T19:35:01.019802+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Page 1"
+		"title" : "Switch git repo to use CLI"
 	},
 	"uid" : {
 		"__type" : "uuid",

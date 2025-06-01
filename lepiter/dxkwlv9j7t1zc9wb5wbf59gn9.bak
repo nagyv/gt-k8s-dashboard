@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T16:47:04.143672+02:00"
+						"dateAndTimeString" : "2025-06-01T16:51:46.912179+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "W78ddeXyDQC5vwOwB3lX6w=="
 				},
-				"code" : "GitCliEnabler>>#example\n\t<gtExample>\n\t<return: #GitCliEnabler>"
+				"code" : "GtIceRepositorySwitcher switchAll"
 			}
 		]
 	},
