@@ -70,3 +70,22 @@ view = k8s_dashboard.Namespaces()'.
 			resultExpression: 'view';
 			sendAndWait ]
 ]
+
+{ #category : #'as yet unclassified' }
+Kubernetes >> showNamespace: aNamespace [
+	| python |
+	python := '
+from k8s_dashboard import k8s_dashboard
+from kubernetes import config
+
+"Configs can be set in Configuration class directly or using helper utility"
+config.load_kube_config()
+
+view = k8s_dashboard.Namespace("', aNamespace, '")'.
+	^ PBApplication do: [ :application | 
+		application newCommandStringFactory 
+			script: python; 
+			resultExpression: 'view';
+			sendAndWait ]
+	
+]
