@@ -1,0 +1,215 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:12:15.72637+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:12:15.72637+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "07EMQ97yDQCKAJKoCGMJ4g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:12:19.617824+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:12:36.924442+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oj9KRN7yDQCKFUP4CGMJ4g=="
+				},
+				"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'kubernetes'.\n"
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:22:36.78815+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T10:28:18.038715+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KXwTad7yDQCKlxfqCGMJ4g=="
+				},
+				"code" : "from abc import ABC, abstractmethod\rfrom gtoolkit_bridge import gtView\rfrom kubernetes import client, config\n\n\"Configs can be set in Configuration class directly or using helper utility\"\n\n\rclass ListView(ABC):\r\tdef __init__(self):\r\t\tself._items = None\r\t\t\r\t\t\r\t@property\r\t@abstractmethod\r\tdef list(self):\r\t\tpass\r\t\r\t@property\r\tdef items(self):\r\t\tif self._items == None:\r\t\t\tself._items = self.list().items\r\t\treturn self._items\r\t\t\r\t@gtView\r\tdef gtViewList(self, aBuilder):\r\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Namespaces\")\n\t\ttable.priority(10)\n\t\ttable.items(lambda: self.items)\r\t\ttable.column(\"Name\", lambda item: str(item.metadata.name))\n\t\ttable.column(\"Status\", lambda item: str(item.status.phase))\r#\t\ttable.column(\"Age\", lambda index: str(self.namespaces[index].metadata.age))\r\t\ttable.set_accessor(lambda item: PodList(self.items[item].metadata.name))\r\t\treturn table\r\t\t\rclass Namespaces(ListView):\r\r\t@property\r\tdef list(self):\r\t\tv1 = client.CoreV1Api()\n\t\treturn v1.list_namespace\r\t\t\rclass PodList(ListView):\r\t\r\tdef __init__(self, namespace):\r\t\tsuper().__init__()\r\t\tself._namespace = namespace\r\t\t\r\t@property\r\tdef list(self):\r\t\tv1 = client.CoreV1Api()\n\t\treturn lambda: v1.list_namespaced_pod(self._namespace)\r\t\t\t\r\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:22:17.510472+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T08:22:17.510472+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cHXSQ97yDQCKB35KCGMJ4g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T09:18:17.665742+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-06-01T10:28:33.109485+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ljg1MN/yDQCXKCAaCGMJ4g=="
+				},
+				"code" : "from kubernetes import config\rconfig.load_kube_config()\rNamespaces()"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-06-01T08:11:58.767079+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-06-01T08:12:08.374338+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Kubernetes dashboard"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "69170c43-def2-0d00-89ff-84d8086309e2"
+	}
+}
