@@ -5,43 +5,6 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:12:15.72637+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:12:15.72637+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "07EMQ97yDQCKAJKoCGMJ4g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -66,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:12:36.924442+02:00"
+						"dateAndTimeString" : "2025-06-01T13:57:52.70383+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "oj9KRN7yDQCKFUP4CGMJ4g=="
 				},
-				"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'kubernetes'.\n"
+				"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'kubernetes'.\r\rsourceFile := FileLocator home / 'Projects' / 'gt-k8s-dashboard' / 'src' / 'k8s_dashboard.py'.\rPBPlatform current workingDirectory ensureCreateDirectory.\rsourceFile copyTo: PBPlatform current workingDirectory / sourceFile basename.\rPBPlatform current workingDirectory\n"
 			},
 			{
-				"__type" : "pythonSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -89,7 +52,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:22:36.78815+02:00"
+						"dateAndTimeString" : "2025-06-01T13:48:39.30387+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +63,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T10:28:18.038715+02:00"
+						"dateAndTimeString" : "2025-06-01T13:48:39.937406+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KXwTad7yDQCKlxfqCGMJ4g=="
+					"uidString" : "tNQX9+LyDQCs9c0wB3lX6w=="
 				},
-				"code" : "from abc import ABC, abstractmethod\rfrom gtoolkit_bridge import gtView\rfrom kubernetes import client, config\n\n\"Configs can be set in Configuration class directly or using helper utility\"\n\n\rclass ListView(ABC):\r\tdef __init__(self):\r\t\tself._items = None\r\t\t\r\t\t\r\t@property\r\t@abstractmethod\r\tdef list(self):\r\t\tpass\r\t\r\t@property\r\tdef items(self):\r\t\tif self._items == None:\r\t\t\tself._items = self.list().items\r\t\treturn self._items\r\t\t\r\t@gtView\r\tdef gtViewList(self, aBuilder):\r\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Namespaces\")\n\t\ttable.priority(10)\n\t\ttable.items(lambda: self.items)\r\t\ttable.column(\"Name\", lambda item: str(item.metadata.name))\n\t\ttable.column(\"Status\", lambda item: str(item.status.phase))\r#\t\ttable.column(\"Age\", lambda index: str(self.namespaces[index].metadata.age))\r\t\ttable.set_accessor(lambda item: PodList(self.items[item].metadata.name))\r\t\treturn table\r\t\t\rclass Namespaces(ListView):\r\r\t@property\r\tdef list(self):\r\t\tv1 = client.CoreV1Api()\n\t\treturn v1.list_namespace\r\t\t\rclass PodList(ListView):\r\t\r\tdef __init__(self, namespace):\r\t\tsuper().__init__()\r\t\tself._namespace = namespace\r\t\t\r\t@property\r\tdef list(self):\r\t\tv1 = client.CoreV1Api()\n\t\treturn lambda: v1.list_namespaced_pod(self._namespace)\r\t\t\t\r\n"
+				"code" : "GtLSPPythonModel onDirectory: PBPlatform current workingDirectory"
 			},
 			{
 				"__type" : "textSnippet",
@@ -171,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T10:38:02.519712+02:00"
+						"dateAndTimeString" : "2025-06-01T13:49:01.316718+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ljg1MN/yDQCXKCAaCGMJ4g=="
 				},
-				"code" : "from kubernetes import config\rconfig.load_kube_config()\r\rNamespaces()"
+				"code" : "import k8s_dashboard\rfrom kubernetes import config\r\r\"Configs can be set in Configuration class directly or using helper utility\"\rconfig.load_kube_config()\r\rNamespaces()"
 			}
 		]
 	},

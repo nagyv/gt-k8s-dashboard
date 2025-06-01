@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:50.280253+02:00"
+						"dateAndTimeString" : "2025-06-01T14:11:58.770542+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:50.280253+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:08.531584+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5AMTIuPyDQCw0MEkB3lX6w=="
+					"uidString" : "stJOSuPyDQC2zrDuB3lX6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "## Kubernetes dashboard"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:44.616368+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:24.932683+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:44.616368+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:41.091428+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MEE0IuPyDQCw2XVVB3lX6w=="
+					"uidString" : "BjMRTOPyDQC3g9VBB3lX6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "- add more List and Details views"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:39.009748+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:08.800736+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:39.009748+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:24.123554+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Ad7EI+PyDQCyCBTkB3lX6w=="
+					"uidString" : "9QsbS+PyDQC3V043B3lX6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "- Build a default dashboard from the list views (Deployments, Services, Pods, Ingress, Configmaps, Secrets) with optional namespace selector"
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:18.5791+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:52.139983+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,85 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T14:12:18.5791+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:52.311457+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "voY7JOPyDQCysdUEB3lX6w=="
+					"uidString" : "DViwTePyDQC3qOUOB3lX6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:12:19.617824+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T13:57:52.70383+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "oj9KRN7yDQCKFUP4CGMJ4g=="
-				},
-				"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'kubernetes'.\r\rsourceFile := FileLocator home / 'Projects' / 'gt-k8s-dashboard' / 'src' / 'k8s_dashboard.py'.\rPBPlatform current workingDirectory ensureCreateDirectory.\rsourceFile copyTo: PBPlatform current workingDirectory / sourceFile basename.\rPBPlatform current workingDirectory\n"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T13:48:39.30387+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T13:48:39.937406+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "tNQX9+LyDQCs9c0wB3lX6w=="
-				},
-				"code" : "GtLSPPythonModel onDirectory: PBPlatform current workingDirectory"
+				"string" : "- change the sourceFile reference to be relative to the current page "
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:22:17.510472+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:47.394003+02:00"
 					}
 				},
 				"editEmail" : {
@@ -245,20 +177,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T08:22:17.510472+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:47.579588+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cHXSQ97yDQCKB35KCGMJ4g=="
+					"uidString" : "dutnTePyDQC3mvOtB3lX6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "- make the repo available for others to use"
 			},
 			{
-				"__type" : "pythonSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -271,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T09:18:17.665742+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:41.708681+02:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-01T13:49:01.316718+02:00"
+						"dateAndTimeString" : "2025-06-01T14:12:41.708681+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Ljg1MN/yDQCXKCAaCGMJ4g=="
+					"uidString" : "FS0RTePyDQC3kZlmB3lX6w=="
 				},
-				"code" : "import k8s_dashboard\rfrom kubernetes import config\r\r\"Configs can be set in Configuration class directly or using helper utility\"\rconfig.load_kube_config()\r\rNamespaces()"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
@@ -301,7 +236,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-01T08:11:58.767079+02:00"
+			"dateAndTimeString" : "2025-06-01T14:12:03.375623+02:00"
 		}
 	},
 	"editEmail" : {
@@ -312,15 +247,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-01T08:12:08.374338+02:00"
+			"dateAndTimeString" : "2025-06-01T14:12:03.375623+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Kubernetes dashboard"
+		"title" : "TODOs"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "69170c43-def2-0d00-89ff-84d8086309e2"
+		"uuid" : "05d04e4a-e3f2-0d00-b6cd-f5e5077957eb"
 	}
 }
