@@ -1,9 +1,4 @@
 This package provides a minimal, work in progress GT package to connect to a Kubernetes cluster from GT.
-## Installation
-
-1. Clone the repo
-1. Load the included Lepiter database
-1. Check the included examples
 ## Limitations
 
 Many :)
@@ -11,8 +6,8 @@ Many :)
 The most notable limitations are the following:
 
 - The setup assumes that you want to see your currently active cluster defined at the default kubeconfig location (~/.kube/config)
-- The package uses Python, as a result it does not work on Windows
-## Todo
+- The package uses Python, as a result it does not work on Windows. 
+## Installation
 
 Use Metacello to load the package and Lepiter:
 
@@ -24,11 +19,16 @@ Metacello new
 	load
 ```
 
-## Load Lepiter
+## Examples
 
-After installing with Metacello, you will be able to execute
+To see the examples, after installing with Metacello, you will be able to execute
 
 ```
 #BaselineOfGtK8sDashboard asClass loadLepiter
 ```
+
+
+and open the related page from the Lepiter knowledge base included in the repository.
+
+Loading the knowledge base is not needed for generic usage.
 
