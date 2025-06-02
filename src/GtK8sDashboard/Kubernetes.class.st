@@ -40,8 +40,7 @@ Kubernetes >> setup [
 		PBPlatform current workingDirectory ensureCreateDirectory.
 		
 		"Symlink the src dir under the python path"
-		location := FileLocator localDirectory / 'iceberg' / 'nagyv' / 'gt-k8s-dashboard' / 'src' / 'k8s_dashboard'.
-		target := location fullName.
+		target := (GtResourceReference path: 'nagyv/gt-k8s-dashboard/srck8s_dashboard') fileReference fullName fullName.
 		pbDir := PBApplication uniqueInstance workingDirectory fullName.
 		LibC runCommand: 'cd ', pbDir , ' && ln -s ', target .
 		
