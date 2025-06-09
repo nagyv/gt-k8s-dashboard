@@ -180,7 +180,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-09T22:00:26.188303+02:00"
+						"dateAndTimeString" : "2025-06-09T22:00:34.290033+02:00"
 					}
 				},
 				"uid" : {
@@ -190,7 +190,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following example assumes that you have a Kubernetes context names `colima` in the default"
+				"string" : "The following example assumes that you have a Kubernetes context names `colima` in the default Kubernetes configuration file."
 			}
 		]
 	},
