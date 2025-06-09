@@ -304,8 +304,10 @@
 					"__type" : "uid",
 					"uidString" : "e2Q9B4vzDQCdAOn3DpkMpA=="
 				},
+				"exampleSelector" : "showDashboardForTestConfigAndColima",
 				"previewHeight" : 200,
 				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "KubernetesExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : false
