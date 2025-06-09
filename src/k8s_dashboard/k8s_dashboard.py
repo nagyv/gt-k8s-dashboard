@@ -4,6 +4,15 @@ from kubernetes import client, config
 
 "Use to find how to call more APIs: https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/CoreV1Api.md"
 
+class ContextawareK8sClient:
+
+	def __init__(self):
+		self._config_file = None
+		self._context_name = None
+		self._config = client.Configuration()
+		config.load_kube_config(self._config_file, self._context_name, self._config, persist_config=False)
+
+
 class ListView(ABC):
 	title = "Resources"
 	
@@ -38,6 +47,7 @@ class ListView(ABC):
 			table.set_accessor(self.accessor)
 		return table
 		
+
 class Namespaces(ListView):
 	title = "Namespaces"
 
@@ -50,6 +60,7 @@ class Namespaces(ListView):
 	def accessor(self):
 		return lambda item: Namespace(self.items[item].metadata.name)
 		
+
 class Namespace:
 	
 	def __init__(self, namespace):
